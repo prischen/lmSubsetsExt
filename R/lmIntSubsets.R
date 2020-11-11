@@ -5,7 +5,7 @@
 #' @return The best strong hierarchical model
 #' @export
 
-lmIntSubsets = function(formula, data, nbest = 10, intercept = TRUE) {
+lmIntSubsets = function(formula, data, ...) {
 
   tt = terms(formula, data = data)
   te = attr(tt, "term.labels")
@@ -14,7 +14,7 @@ lmIntSubsets = function(formula, data, nbest = 10, intercept = TRUE) {
   interactions = te[grep(":",te)]
   not_interactions = te[!te %in% interactions]
 
-  res = lmSubsets::lmSubsets(formula, data, nbest = nbest, intercept = intercept, penalty = "AIC")
+  res = lmSubsets::lmSubsets(formula, data, ...)
 
   sub = data.frame(cbind(res$submodel, res$subset))
   colnames(sub) = c(colnames(res$submodel), colnames(res$subset))
