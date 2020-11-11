@@ -1,0 +1,11 @@
+Package: lmSubsetsExt
+Type: Package
+Title: An Extension of lmSubsets
+Version: 0.1.0
+Author: Priscilla Chen
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Extends lmSubsets to produce strong hierarchical models.
+    Includes new plot function for lmSubsets object
+License: 
+Encoding: UTF-8
+LazyData: true
