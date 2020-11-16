@@ -6,7 +6,7 @@
 #' @return a plot of the lmSubsets object
 #' @export
 
-plot.lmSubsets = function(lmSub, criterion){
+plot.lmSubsets = function(lmSub, criterion = "BIC"){
   require(plotly)
   require(lmSubsets)
 
